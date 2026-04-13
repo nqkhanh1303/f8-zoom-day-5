@@ -42,6 +42,13 @@ p {
     margin-bottom: 1rem;
 }
 
+blockquote{
+    margin: 20px 0;
+    padding: 10px 20px;
+    border-left: 4px solid #0ea89c;
+    font-style: italic;
+    color: #333;
+}
 i,
 em {
     font-style: italic;
@@ -410,4 +417,139 @@ span.required::after {
 .cta-btn.filled:hover {
     background: #1B5E20;
     border-color: #1B5E20;
+}
+
+/* Bai 4: Blog Post */
+::selection {
+    background-color: #2E7D32;
+    color: #ffffff;
+}
+
+.blog-container {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 4rem;
+}
+.blog-header h1 {
+    font-size: 2.4rem;
+    font-weight: bold;
+    color: #2E7D32;
+    line-height: 1.3;
+    margin-bottom: 1.2rem;
+    padding-top: 1.5rem;
+}
+.blog-header img {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    border-radius: 16px;
+    display: block;
+    margin-bottom: 2rem;
+}
+h2:not(h1),
+h3:not(h1),
+h4:not(h1) {
+    font-size: 1.15rem;
+    font-weight: bold;
+    color: #1B5E20;
+    border-left: 4px solid #a8d94a;
+    padding-left: 12px;
+    margin: 2.2rem 0 1rem;
+    border-radius: 0;
+}
+.blog-main p {
+    margin-bottom: 1.4rem;
+    color: #2c2c2c;
+    font-size: 15px;
+}
+.blog-main p:first-of-type::first-letter {
+    float: left;
+    font-size: 4.5rem;
+    font-weight: bold;
+    line-height: 0.82;
+    color: #2E7D32;
+    margin: 6px 10px 0 0;
+    font-family: Georgia, serif;
+}
+.blog-main p::first-line {
+    color: #1B5E20;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+.blog-main p:nth-of-type(odd) {
+    padding-left: 0;
+}
+.blog-main p:nth-of-type(even) {
+    background-color: #f0f9f0;
+    border-left: 3px solid #c8e6c9;
+    padding: 10px 14px;
+    border-radius: 0 8px 8px 0;
+}
+blockquote::before {
+    content: "\201C";
+    position: absolute;
+    top: -6px;
+    left: 10px;
+    font-size: 5.5rem;
+    color: #a8d94a;
+    font-family: Georgia, serif;
+    line-height: 1;
+    opacity: 0.85;
+}
+.blog-cmt {
+    margin-top: 3.5rem;
+    border-top: 2px solid #c8e6c9;
+    padding-top: 2rem;
+}
+.blog-cmt > p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #1B5E20;
+    margin-bottom: 1.4rem;
+    border-left: 4px solid #a8d94a;
+    padding-left: 12px;
+}
+.cmt {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 1rem 1.2rem;
+    margin-bottom: 12px;
+    background-color: #ffffff;
+    border: 0.5px solid #c8e6c9;
+    border-radius: 12px;
+    transition: transform 0.22s ease,
+                box-shadow 0.22s ease,
+                border-color 0.22s ease;
+}
+.cmt:hover {
+    box-shadow: -4px 0 0 #2E7D32, 6px 10px 28px rgba(46, 125, 50, 0.12);
+    border-color: #a8d94a;
+}
+.cmt img {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    border: 2px solid #c8e6c9;
+    transition: border-color 0.22s;
+}
+.cmt p:nth-of-type(1) {
+    font-weight: 600;
+    font-size: 14px;
+    color: #1B5E20;
+    margin: 0;
+}
+.cmt p:nth-of-type(2) {
+    font-size: 14px;
+    color: #444;
+    margin: 2px 0 0;
+}
+.cmt:nth-of-type(even) {
+    background-color: #f7fdf2;
+}
+.cmt:nth-of-type(3n) img {
+    border-color: #2E7D32;
+    box-shadow: 0 0 0 3px #a8d94a;
 }
