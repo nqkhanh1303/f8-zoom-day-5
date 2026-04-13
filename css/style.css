@@ -57,9 +57,9 @@ a {
 }
 
 hr {
-    height: 1px;
-    background-color: #a5c78a;
-    border: none;
+    height: 2px;
+    background-color: gray;
+    border: 1px solid;
 }
 
 ul,
@@ -298,4 +298,116 @@ span.required::after {
     color: red;
     display: inline-block;
     margin-left: 5px;
+}
+/* Bai 3: Bang gia */
+.pricing-wrap {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    padding: 2rem 1rem;
+    max-width: 860px;
+    margin: 0 auto;
+}
+.pricing-card {
+    background: #fff;
+    border: 0.5px solid #c8e6c9;
+    border-radius: 20px;
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+.pricing-card:hover {
+    box-shadow: 0 16px 40px rgba(46, 125, 50, 0.15), 0 4px 12px rgba(0,0,0,0.08);
+}
+.pricing-card:nth-child(2) {
+    border: 2px solid #ffd700;
+    background: #f7fdf2;
+}
+.pricing-card:nth-child(2):hover {
+    box-shadow: 0 20px 48px rgba(46, 125, 50, 0.25), 0 6px 16px rgba(0,0,0,0.10);
+}
+.plan-name {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #555;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.pricing-card:nth-child(2) .plan-name { color: #2E7D32; }
+.price-row {
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
+    margin-bottom: 6px;
+}
+.price-amount {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #1a1a1a;
+    line-height: 1;
+}
+.price-currency {
+    font-size: 1rem;
+    color: #888;
+    align-self: flex-start;
+    padding-top: 6px;
+}
+.price-period {
+    font-size: 1rem;
+    color: #888;
+    margin-bottom: 20px;
+}
+.feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.feature-list li {
+    font-size: 14px;
+    padding-left: 22px;
+    position: relative;
+    line-height: 1.5;
+    color: #1a1a1a;
+}
+.feature-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #2E7D32;
+    font-weight: bold;
+}
+.cta-btn {
+    display: block;
+    width: 100%;
+    margin-top: 24px;
+    padding: 11px 0;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 8px;
+    border: 1.5px solid #2E7D32;
+    color: #2E7D32;
+    background: transparent;
+    cursor: pointer;
+    transition: background 0.18s, color 0.18s;
+    font-family: inherit;
+}
+.cta-btn:hover {
+    background: #2E7D32;
+    color: #fff;
+}
+.cta-btn.filled {
+    background: #2E7D32;
+    color: #fff;
+}
+
+.cta-btn.filled:hover {
+    background: #1B5E20;
+    border-color: #1B5E20;
 }
