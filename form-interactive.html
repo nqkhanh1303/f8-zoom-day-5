@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Form - Nguyen Quang Khanh</title>
+        <link rel="stylesheet" href="./css/reset.css" />
+        <link rel="stylesheet" href="./css/style.css" />
+    </head>
+    <body>
+        <div class="form">
+            <h1 class="heading">Register</h1>
+            <form action="" autocomplete="off">
+                <div class="form-group">
+                    <label>
+                        <span class="form-label">Profile Picture:</span>
+                        <input type="file" accept="image/*" hidden />
+                        <img
+                            class="avatar-img"
+                            src="https://thumbs.dreamstime.com/b/avatar-icon-vector-male-add-user-person-profile-plus-symbol-flat-color-glyph-pictogram-illustration-avatar-icon-vector-119707395.jpg"
+                            alt="Chon avatar"
+                        />
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label>
+                        <span class="form-label required">Display Name:</span>
+                        <input
+                            class="form-input"
+                            type="text"
+                            placeholder="Tên hiển thị"
+                            required
+                        />
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label>
+                        <span class="form-label required">Email:</span>
+                        <input
+                            class="form-input"
+                            type="email"
+                            placeholder="Địa chỉ email"
+                            required
+                        />
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label>
+                        <span class="form-label required">Phone Number:</span>
+                        <input
+                            class="form-input"
+                            type="number"
+                            placeholder="Số điện thoại"
+                            required
+                        />
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label>
+                        <span class="form-label required">Password:</span>
+                        <input
+                            class="form-input"
+                            type="password"
+                            placeholder="Mật khẩu"
+                            required minlength="6"
+                        />
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label>
+                        <span class="form-label required">Confirm Password:</span>
+
+                        <input
+                            class="form-input"
+                            type="password"
+                            placeholder="Nhập lại mật khẩu"
+                            required minlength="6"
+                        />
+                    </label>
+                </div>
+                <div class="form-group">
+                    <p>Gender:</p>
+                    <label>
+                        <input type="radio" name="gender" /> Nam<br />
+                    </label>
+                    <label>
+                        <input type="radio" name="gender" /> Nu<br />
+                    </label>
+                    <label>
+                        <input type="radio" name="gender" /> Khac<br />
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label>
+                        <span class="form-label">Date of Birth:</span>
+                        <input type="date" required />
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label>
+                        <span class="form-label">Address:</span>
+                        <input
+                            class="form-input"
+                            type="text"
+                            placeholder="Địa chỉ hiện tại"
+                            required
+                        />
+                    </label>
+                </div>
+                <div class="form-group">
+                    <p>Chọn loại email bạn muốn nhận:</p>
+                    <label>
+                        <input type="checkbox" />
+                        Subscribe to Newsletter
+                    </label>
+                    <br />
+                    <label>
+                        <input type="checkbox" />
+                        Receive Promotional Emails
+                    </label>
+                    <br />
+                    <label>
+                        <input type="checkbox" />
+                        Get Product Updates
+                    </label>
+                </div>
+                <div class="form-group">
+                    <button class="btn">Register</button>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
